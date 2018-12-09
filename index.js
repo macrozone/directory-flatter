@@ -4,7 +4,6 @@ const moment = require('moment')
 
 const [input, output] = process.argv.slice(2)
 
-const files = []
 klaw(input)
   .on('data', item => {
     if (!item.stats.isDirectory()) {
@@ -39,6 +38,5 @@ klaw(input)
     }
   })
   .on('end', () => {
-    //console.log('all files', files)
-    files.forEach(file => {})
+    console.log('finished')
   })
