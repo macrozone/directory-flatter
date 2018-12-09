@@ -13,7 +13,7 @@ klaw(input)
 
       const [fileName, parentFolder] = path.split('/').reverse()
       //console.log(fileName, parentFolder)
-      const fileMoment = moment(stats.birthtimeMs)
+      const fileMoment = moment(stats.birthtimeMs || stats.mtimeMs)
       const date = fileMoment.format('YYYY-MM-DD')
       const month = fileMoment.format('MM')
       const year = fileMoment.format('YYYY')
