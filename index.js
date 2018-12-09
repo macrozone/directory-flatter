@@ -29,9 +29,10 @@ klaw(input)
         },
         err => {
           if (err) {
-            console.error(err)
-          } else {
-            console.log('copied', path, target)
+            console.error(
+              'error copying file from ' + path + ' to ' + target,
+              err
+            )
           }
         }
       )
